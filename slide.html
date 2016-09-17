@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{padding:0;margin:0;}
+		ul{list-style:none;}
+		.slide-box{position:relative;height:500px;width:1000px;left:50%;margin-left:-500px;border:1px solid #ccc;margin-top:100px;overflow:hidden;}
+		.slide-box img{width:1000px;height:500px}
+		.slide-box .slide-content{position:absolute;height:inherit;top:0;left:0;left:0;}
+		.slide-box .slide-content li{width:1000px;float:left;}
+		.slide-box .bullets{position:absolute;}
+		.slide-box .bullets li{float:left;width:20px;height:20px;background:red;margin:0 10px;border-radius:50%;cursor:pointer;}
+		.slide-box .bullets li.active{background:gray;}
+		.slide-box>a{position:absolute;color:#fff;font-size:24px;height:100px;width:50px;background:green;z-index:3;}
+		.slide-box .prev{left:10px;top:50%;}
+		.slide-box .next{right:10px;top:50%;}
+	</style> 
+</head>
+<body>
+	<div class="slide-box">
+		<a href="#" class="prev">prev</a>
+		<ul class="slide-content">
+			<li class="slide"><img src="1.jpg"></li>
+			<li class="slide"><img src="2.jpg"></li>
+			<li class="slide"><img src="1.jpg"></li>
+			<li class="slide"><img src="2.jpg"></li>
+		</ul>
+		<ul class="bullets">
+
+		</ul>
+		<a href="#" class="next">next</a>
+	</div>
+	<script type="text/javascript" src="jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="jquery.carousel.js"></script>
+	<script type="text/javascript">
+		$('.slide-box').carouse({
+			animationTime:500,
+			IntervalTime:5000,
+			bullets:true,
+			buttons:true
+		});
+	</script>
+</body>
+</html>
