@@ -138,7 +138,6 @@
 				zIndex:10
 			})
 			bullet.eq(0).addClass('active')
-
 		},
 		checkBullet:function(index){
 			var _this_ = this,
