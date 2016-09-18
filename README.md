@@ -1,2 +1,2 @@
 # Carouse
-this is a caroouse plugin
+this is a carouse plugin
